@@ -11,5 +11,16 @@ files_endpoint = "/files/abc.txt"
 url = base_url + files_endpoint
 
 response = httpx.get(url)
-resp = json.loads(response.text)
-print(resp)
+
+status_code = response.status_code
+
+if status_code == 200:
+    print("Good Connection Established with 200")
+
+    resp_dict = json.loads(response.text)
+    print(resp_dict)
+
+
+else:
+    print("Not Good Result")
+    print("Status Code:", response.status_code)
