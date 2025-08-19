@@ -20,7 +20,7 @@ if status_code == 200:
     resp_dict = json.loads(response.text)
     print(resp_dict)
 
-
 else:
     print("Not Good Result")
     print("Status Code:", response.status_code)
+
