@@ -1,5 +1,8 @@
 import json
+
+
 import httpx
+
 
 base_url = "http://localhost:8000"
 
@@ -10,6 +13,3 @@ url = base_url + files_endpoint
 response = httpx.get(url)
 resp = json.loads(response.text)
 print(resp)
-
-
-print(response.text)
