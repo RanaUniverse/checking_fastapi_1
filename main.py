@@ -38,6 +38,9 @@ def check_post_1():
         "price": 250,
         "description": "This is a good book written for our universe.",
         "tax": 20,
+        "extra_key_1" : 111,
+        "extra_key_2" : 222,
+        "extra_key_3" : 333,
     }
 
     params = {"tax": 15}
