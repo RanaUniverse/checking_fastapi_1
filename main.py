@@ -43,7 +43,7 @@ def check_post_1():
         "extra_key_3" : 333,
     }
 
-    params = {"tax": 15}
+    params = {"tax": 15, "poo":12}
 
     response = httpx.post(url, json=payload, params=params)
 
