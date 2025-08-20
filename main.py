@@ -38,12 +38,12 @@ def check_post_1():
         "price": 250,
         "description": "This is a good book written for our universe.",
         "tax": 20,
-        "extra_key_1" : 111,
-        "extra_key_2" : 222,
-        "extra_key_3" : 333,
+        "extra_key_1": 111,
+        "extra_key_2": 222,
+        "extra_key_3": 333,
     }
 
-    params = {"tax": 15, "poo":12}
+    params = {"tax": 15, "poo": 12}
 
     response = httpx.post(url, json=payload, params=params)
 
@@ -62,6 +62,15 @@ def check_post_1():
             print(response.text)
 
 
+def check_get_2():
+    final_endpoint = "/time/"
+    url = base_url + final_endpoint
+    parameters_dict = {"after_minute": 20}
+    response = httpx.get(url=url, params=parameters_dict)
+    print(response.json())
+
+
 if __name__ == "__main__":
     # check_get_1()
-    check_post_1()
+    # check_post_1()
+    check_get_2()
